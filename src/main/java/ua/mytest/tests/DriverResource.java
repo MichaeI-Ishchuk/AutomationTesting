@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class DriverResource {
 
-
-
   public static WebDriver getDriver(String nameBrowser)
 
   {
@@ -46,7 +44,6 @@ public class DriverResource {
           return new ChromeDriver();
 
       }
-
 
   }
 
