@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ua.mytest.tests.utils.Properties;
 
+import java.util.List;
+
 /**
  * Contains main script actions that may be used in scripts.
  */
@@ -28,6 +30,9 @@ public class GeneralActions {
     private By addCategory = By.cssSelector("#page-header-desc-category-new_category");
     private By addName = By.id("name_1");
     private By saveCategory = By.id("category_form_submit_btn");
+    private By sortName = By.cssSelector("input[name=categoryFilter_name]");
+    private By find = By.id("submitFilterButtoncategory");
+    private  By table = By.cssSelector("tbody tr");
 
 
 
@@ -54,6 +59,9 @@ public class GeneralActions {
 
 
 
+
+
+
     }
 
     /**
@@ -63,7 +71,7 @@ public class GeneralActions {
     public void createCategory(String categoryName)
 
     {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(this.catalog));
+        waitForContentLoad(catalog);
         WebElement catalog= driver.findElement(this.catalog);
         WebElement category = driver.findElement(this.category);
       //  wait.until(ExpectedConditions.stalenessOf(catalog));
@@ -87,8 +95,13 @@ public class GeneralActions {
                 ,saveCategory);
 
 
-       //saveCategory.click();
+       saveCategory.click();
 
+        WebElement sort = driver.findElement(this.sortName);
+        WebElement find = driver.findElement(this.find);
+
+        action.moveToElement(sort).click().sendKeys(categoryName).moveToElement(find).click().build().perform();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(table, 0));
     }
 
     public void close()
@@ -99,11 +112,9 @@ public class GeneralActions {
     }
 
 
-    public void waitForContentLoad() {
-        // TODO implement generic method to wait until page content is loaded
+    public void waitForContentLoad(By locator) {
 
-        // wait.until(...);
-        // ...
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
 }

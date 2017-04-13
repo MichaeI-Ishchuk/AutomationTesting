@@ -58,6 +58,7 @@ public class EventHandler implements WebDriverEventListener{
     }
 
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
+        System.out.println("should be "+ by);
 
     }
 
@@ -68,9 +69,13 @@ public class EventHandler implements WebDriverEventListener{
 
     public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
 
+        System.out.println("should click");
+
     }
 
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
+
+        System.out.println("Clicked successfull");
 
     }
 
