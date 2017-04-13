@@ -85,9 +85,8 @@ public class GeneralActions {
        JavascriptExecutor js= (JavascriptExecutor)driver;
         js.executeScript("arguments[0].scrollIntoView();"
                 ,saveCategory);
-
-
-       //saveCategory.click();
+        
+       saveCategory.click();
 
     }
 
