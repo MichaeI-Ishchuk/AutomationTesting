@@ -23,12 +23,18 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="AutomatingTest" />
+      </profile>
+      <profile default="false" name="Annotation profile for AutomationTest" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="AutomationTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AutomatingTest" target="1.5" />
-      <module name="AutomationTest" target="1.5" />
+      <module name="AutomationTest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
