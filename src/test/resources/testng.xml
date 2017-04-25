@@ -12,36 +12,36 @@
         <class name="home5.tests.PlaceOrderTest" />
     </classes>
 </test>
-    <!--<test name="Create New Order [Internet explorer]" >-->
-        <!--<parameter name="selenium.browser" value="internet explorer" />-->
-        <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
-        <!--<classes>-->
-            <!--<class name="home5.tests.PlaceOrderTest" />-->
-        <!--</classes>-->
-    <!--</test>-->
-   <!--<test name="Create New Order [Firefox]" >-->
-        <!--<parameter name="selenium.
-        browser" value="firefox" />-->
-        <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
-        <!--<classes>-->
-            <!--<class name="home5.tests.PlaceOrderTest" />-->
-        <!--</classes>-->
-    <!--</test>-->
+    <test name="Create New Order [Internet explorer]" >
+        <parameter name="selenium.browser" value="internet explorer" />
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="home5.tests.PlaceOrderTest" />
+        </classes>
+    </test>
+   <test name="Create New Order [Firefox]" >
+        <parameter name="selenium.
+        browser" value="firefox" />
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="home5.tests.PlaceOrderTest" />
+        </classes>
+    </test>
 
-    <!--<test name="Create New Order [Phantom]" >-->
-    <!--<parameter name="selenium.browser" value="phantomjs" />-->
-    <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
-    <!--<classes>-->
-    <!--<class name="home5.tests.PlaceOrderTest" />-->
-    <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="Create New Order [Android]" >-->
-        <!--<parameter name="selenium.browser" value="android" />-->
-        <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
-        <!--<classes>-->
-            <!--<class name="home5.tests.PlaceOrderTest" />-->
-        <!--</classes>-->
-    <!--</test>-->
+    <test name="Create New Order [Phantom]" >
+    <parameter name="selenium.browser" value="phantomjs" />
+    <parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />
+    <classes>
+    <class name="home5.tests.PlaceOrderTest" />
+    </classes>
+    </test>
+    <test name="Create New Order [Android]" >
+        <parameter name="selenium.browser" value="android" />
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="home5.tests.PlaceOrderTest" />
+        </classes>
+    </test>
 
 
 </suite>
