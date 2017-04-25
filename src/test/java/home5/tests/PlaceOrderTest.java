@@ -36,7 +36,7 @@ public class PlaceOrderTest extends BaseTest {
         actions.checkValueInStock();
         CustomReporter.logAction("Check qty");
         Assert.assertTrue(actions.getQtyProduct()==actions.getQty()-1, "Qty is less");
-        CustomReporter.logAction("Qty is less");
+       
     }
 
 }
