@@ -11,30 +11,27 @@ import java.util.List;
 /**
  * Created by nata on 02.04.2017.
  */
-public class Test_2 {
+public class Test_2 extends DriverResource {
 
-
-    private static String email="webinar.test@gmail.com";
-    private static String password="Xcg7299bnSmMuRLp9ITw";
 
 
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver webDriver = DriverResource.getConfiguredDriver("Chrome");
 
-        webDriver.get(Properties.getBaseAdminUrl());
+        webDriver.get(getUrl());
         sleep(2000);
 
         WebElement emailElement = webDriver.findElement(By.id("email"));
-        emailElement.sendKeys(email);
+        emailElement.sendKeys(getEmail());
 
         WebElement passwordElement = webDriver.findElement(By.id("passwd"));
-        passwordElement.sendKeys(password);
+        passwordElement.sendKeys(getPassword());
 
         WebElement submit = webDriver.findElement(By.name("submitLogin"));
         submit.click();
 
-        sleep(4000);
+        sleep(2000);
 
         WebElement menu = webDriver.findElement(By.className("menu")).findElement(By.id("subtab-AdminParentOrders"));
         menu.click();
@@ -107,26 +104,11 @@ public class Test_2 {
             print("Ok");}else {print("error");}
 
 
-        webDriver.quit();
+        webDriver.close();
     }
 
-    private static void sleep(long time)
 
-    {
 
-        try {
-            Thread.sleep(time);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 
-    private static void print(String title)
-
-    {
-
-        System.out.println(title);
-
-    }
 
 }

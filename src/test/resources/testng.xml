@@ -1,34 +1,86 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
+
+        <!--for home5-->
+
 <suite name="Products Management" verbose="1" >
 
-    <test name="Create New Product [Chrome]" >
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-        <class name="home4.tests.CreateProductTest"></class>
-        </classes>
+   <test name="Create New Order [Chrome]" >
+    <parameter name="selenium.browser" value="chrome" />
+    <parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />
+    <classes>
+        <class name="home5.tests.PlaceOrderTest" />
+    </classes>
+</test>
+    <!--<test name="Create New Order [Internet explorer]" >-->
+        <!--<parameter name="selenium.browser" value="internet explorer" />-->
+        <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
+        <!--<classes>-->
+            <!--<class name="home5.tests.PlaceOrderTest" />-->
+        <!--</classes>-->
+    <!--</test>-->
+   <!--<test name="Create New Order [Firefox]" >-->
+        <!--<parameter name="selenium.
+        browser" value="firefox" />-->
+        <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
+        <!--<classes>-->
+            <!--<class name="home5.tests.PlaceOrderTest" />-->
+        <!--</classes>-->
+    <!--</test>-->
 
-
-    </test>
-
-    <test name="Create New Product [Firefox]" >
-        <parameter name="browser" value="firefox"></parameter>
-        <classes>
-            <class name="home4.tests.CreateProductTest"></class>
-        </classes>
-
-
-    </test>
-
-    <test name="Create New Product [IE]" >
-        <parameter name="browser" value="internet explorer"></parameter>
-        <classes>
-            <class name="home4.tests.CreateProductTest"></class>
-        </classes>
-
-
-    </test>
-
+    <!--<test name="Create New Order [Phantom]" >-->
+    <!--<parameter name="selenium.browser" value="phantomjs" />-->
+    <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
+    <!--<classes>-->
+    <!--<class name="home5.tests.PlaceOrderTest" />-->
+    <!--</classes>-->
+    <!--</test>-->
+    <!--<test name="Create New Order [Android]" >-->
+        <!--<parameter name="selenium.browser" value="android" />-->
+        <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />-->
+        <!--<classes>-->
+            <!--<class name="home5.tests.PlaceOrderTest" />-->
+        <!--</classes>-->
+    <!--</test>-->
 
 
 </suite>
+
+
+
+
+
+            <!--for home4-->
+
+<!--<suite name="Products Management" verbose="1" >-->
+
+    <!--<test name="Create New Product [Chrome]" >-->
+        <!--<parameter name="browser" value="chrome"></parameter>-->
+        <!--<classes>-->
+        <!--<class name="home4.tests.CreateProductTest"></class>-->
+        <!--</classes>-->
+
+
+    <!--</test>-->
+
+    <!--<test name="Create New Product [Firefox]" >-->
+        <!--<parameter name="browser" value="firefox"></parameter>-->
+        <!--<classes>-->
+            <!--<class name="home4.tests.CreateProductTest"></class>-->
+        <!--</classes>-->
+
+
+    <!--</test>-->
+
+    <!--<test name="Create New Product [IE]" >-->
+        <!--<parameter name="browser" value="internet explorer"></parameter>-->
+        <!--<classes>-->
+            <!--<class name="home4.tests.CreateProductTest"></class>-->
+        <!--</classes>-->
+
+
+    <!--</test>-->
+
+
+
+<!--</suite>-->
